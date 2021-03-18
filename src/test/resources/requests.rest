@@ -1,0 +1,62 @@
+###
+GET http://localhost:8080/flats
+
+
+
+###
+GET http://localhost:8080/flats/1
+
+
+
+###
+POST http://localhost:8080/flats
+Content-Type: application/json
+
+{ "rooms": "1",
+  "area": "32",
+  "storey": "6",
+  "storeyInHouse": "9",
+  "price": "700",
+  "address": "Чуйкова"
+}
+
+
+###
+POST http://localhost:8080/flats
+Content-Type: application/json
+
+{ "rooms": "2",
+  "area": "61",
+  "storey": "1",
+  "storeyInHouse": "10",
+  "price": "1500",
+  "address": "Гаврилова"
+}
+
+###
+POST http://localhost:8080/flats
+Content-Type: application/json
+
+{ "rooms": "3",
+  "area": "90",
+  "storey": "14",
+  "storeyInHouse": "20",
+  "price": "2000",
+  "address": "Лавреньтева"
+}
+###
+GET http://localhost:8080/flats/search?address=Гаврилова
+
+
+###
+GET http://localhost:8080/flats/filter?MinPrice=100&MaxPrice=1000
+
+###
+GET http://localhost:8080/flats/filter?MinPrice=1000&MaxPrice=1600
+
+
+
+
+
+
+
