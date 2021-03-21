@@ -9,7 +9,22 @@ import java.util.ArrayList;
 
 public class FlatManager {
     private long nextId = 1;
+
     private ArrayList<Flat> flats = new ArrayList<Flat>();
+
+    public Flat getById(long id) {
+        for (Flat flat : flats) {
+            if (flat.getId() == id) {
+                return flat;
+            }
+        }
+
+        return null;
+    }
+
+    public ArrayList<Flat> getAll() {
+        return flats;
+    }
 
     public Flat register(FlatCreat dto) {
         Flat flat = new Flat(
@@ -71,20 +86,6 @@ public class FlatManager {
         }
     }
 
-    public ArrayList<Flat> getAll() {
-        return flats;
-    }
-
-    public Flat getById(long id) {
-        for (Flat flat : flats) {
-            if (flat.getId() == id) {
-                return flat;
-            }
-        }
-
-        return null;
-    }
-
     public ArrayList<Flat> searchBy(String address) {
         ArrayList<Flat> result = new ArrayList<>();
 
@@ -104,7 +105,6 @@ public class FlatManager {
             }
         }
         return result;
-
 
     }
 }

@@ -15,7 +15,6 @@ public class FlatController {
     @GetMapping("/flats")
     public ArrayList<Flat> getAll() { return manager.getAll(); }
 
-
     @GetMapping("/flats/search")
     public ArrayList<Flat> searchBy(@RequestParam String address) {
         return manager.searchBy(address);
@@ -23,8 +22,7 @@ public class FlatController {
 
     @GetMapping("/flats/filter")
     public ArrayList<Flat> searchByMinMaxPrice(@RequestParam int MinPrice, @RequestParam int MaxPrice) {
-        return manager.searchByMinMaxPrice(MinPrice, MaxPrice);
-    }
+        return manager.searchByMinMaxPrice(MinPrice, MaxPrice); }
 
     @GetMapping("flats/{id}")
     public Flat getById(@PathVariable long id) {

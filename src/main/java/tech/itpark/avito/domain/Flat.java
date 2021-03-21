@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
+
 public class Flat {
     private long id;
     private String image;
